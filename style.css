@@ -1,0 +1,44 @@
+/* body {
+    font-feature-settings: "kern" on, "liga" on;
+    text-rendering: optimizeLegibility;
+} */
+@font-face {
+    font-family: TimesNewBastard;
+    src: url(Times-New-Bastard-master\fonts\Web\WOFF\TimesNewBastard-RegularWeb.woff);
+}
+
+body{
+    margin: 2%;
+    font-family: TimesNewBastard;
+}
+
+
+h1{
+    font: xx-large;
+    font-family: TimesNewBastard;
+    padding-bottom: 4px;
+    border-style: groove;
+    border-radius: 5%;
+    position: relative;
+}
+
+a{
+    padding: 10%;
+}
+
+li{
+    display: inline;
+    padding: 2%;
+}
+
+#images{
+    position: relative;
+    z-index:-1;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    border-style: solid;
+    border-width: 8px;
+}
