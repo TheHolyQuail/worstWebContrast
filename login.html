@@ -1,0 +1,160 @@
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- It's Times New Roman but every seventh letter is jarringly sans serif -->
+
+<link rel = "stylesheet" type = "text/css" href = "css\style.css" />
+<script src="game.js"></script>
+
+<style>
+  body{
+    background-color: white;
+    color: black;
+  }
+  a{
+    color: white;
+  }
+  ul{
+    background-color: white;
+    border: black;
+    margin-top: 10%;
+    list-style: none;
+    float: left;
+    position: fixed;
+    border-style: solid;
+    border-width: 5px;
+    padding: 10%;
+  }
+  li{
+    color: black;
+  }
+
+  img{
+    border-color: black;
+
+  }
+  button{
+    background-color: black;
+    color: white;
+    display: inline;
+    position: absolute;
+    z-index:1;
+  }
+  
+  #login{
+    position: absolute;
+    float: right;
+    /* padding-right:30%; */
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  #errorMessage {
+    color: red;
+  }
+</style>
+</head>
+
+<body>
+
+  <div id="topBar">
+    <h1>Time to log in!</h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><strong>Home</strong></li>
+      <li><a href="BestFont.html">Best Font</a></li>
+      <li><a href="game.html">Play Game</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <div id="login">
+    <div>
+        <!-- Date of birth 'entry' -->
+        <table id="dateOfBirth">
+          <p>Enter date of birth:</p>
+          <tr>
+            <th>
+              <p>Day</p>
+            </th>
+            <th>
+              <p>Month</p>
+            </th>
+            <th>
+              <p>Year</p>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <!-- populated with random day -->
+              <div id="day"></div>
+            </td>
+            <td>
+              <!-- populated with random month -->
+              <div id="month"></div>
+            </td>
+            <td>
+              <!-- populated with random year (1900 - 2020) -->
+              <div id="year"></div>
+            </td>
+            <td>
+              <!-- entry lever -->
+              <button class = "lever" onclick="newDate()">⛏</button>
+            </td>
+          </tr>
+        </table>
+  
+        <!-- username 'entry' -->
+        <table id="usernameEntry">
+          <p>Enter username:</p>
+          <tr>
+            <th>username</th>
+          </tr>
+          <tr>
+            <td>
+              <!-- populated with random username (2-12 characters) -->
+              <div id="username"></div>
+            </td>
+            <td>
+              <!-- entry lever -->
+              <button class = "lever" onclick="newUsername()">⛏</button>
+            </td>
+          </tr>
+        </table>
+  
+        <!-- Date of birth 'entry' -->
+        <table id="passwordEntry">
+          <p>Enter password:</p>
+          <tr>
+            <th>password</th>
+          </tr>
+          <tr>
+            <td>
+              <!-- populated with random password (which is hidden under astrixes) -->
+              <div id="password"></div>
+            </td>
+            <td>
+              <!-- entry lever -->
+              <button class = "lever" onclick="newPassword()">⛏</button>
+            </td>
+          </tr>
+        </table>
+  <br>
+        <div>
+          <button onclick="login()">log in</button>
+          <p id="errorMessage"></p>
+        </div>
+      </div>
+  </div>
+
+</body>
+
+</html>
