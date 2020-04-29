@@ -21,6 +21,7 @@ function newDate(){
 }
 
 function newUsername(){
+    console.log('new name')
   document.getElementById("errorMessage").innerHTML = "";
   let len = Math.floor((Math.random() * (12 - 2)) + 2);
   let output = "";
